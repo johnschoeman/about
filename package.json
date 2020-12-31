@@ -6,7 +6,11 @@
   "license": "MIT",
   "scripts": {
     "buildCss": "npx tailwindcss-cli@latest build -o tailwind.css",
-    "build": "yarn buildCss && ./bin/build_dist.sh"
+    "build": "yarn buildCss && ./bin/build_dist.sh",
+    "devServer": "live-server ."
   },
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
 }
