@@ -5,7 +5,8 @@
   "author": "John Schoeman <johnschoeman1617@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": ""
+    "buildCss": "npx tailwindcss-cli@latest build -o tailwind.css",
+    "build": "yarn buildCss && ./bin/build_dist.sh"
   },
   "dependencies": {}
 }
