@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .lnk {
-  @apply inline-block text-blue-600 text-sm underline;
+  @apply inline-block text-blue-600 underline;
 }
 .lnk:visited {
   @apply text-indigo-600;
