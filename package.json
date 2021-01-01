@@ -5,12 +5,18 @@
   "author": "John Schoeman <johnschoeman1617@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "buildCss": "npx tailwindcss-cli@latest build -o tailwind.css",
-    "build": "yarn buildCss && ./bin/build_dist.sh",
+    "buildCss": "npx postcss styles.css -o tailwind.css",
+    "build": "NODE_ENV=production yarn buildCss && ./bin/build_dist.sh",
+    "buildDev": "yarn buildCss",
     "devServer": "live-server ."
   },
-  "dependencies": {},
+  "dependencies": {
+    "autoprefixer": "^10.1.0",
+    "postcss": "^8.2.2",
+    "tailwindcss": "^2.0.2"
+  },
   "devDependencies": {
-    "live-server": "^1.2.1"
+    "live-server": "^1.2.1",
+    "postcss-cli": "^8.3.1"
   }
 }
