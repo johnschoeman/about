@@ -1,14 +1,37 @@
 <script lang="ts">
-  export let name: string;
+  import Home from "./Home.svelte"
 </script>
 
 <main>
-  <h1 class="text-2xl text-gray-800 font-bold">Hello {name}!</h1>
- <p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+  <Home />
 </main>
 
 <style global lang="postcss">
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
+
+
+@layer components {
+  .lnk {
+    @apply inline-block text-blue-600 underline;
+  }
+  .lnk:visited {
+    @apply text-indigo-600;
+  }
+  .lnk:hover {
+    @apply text-blue-800;
+  }
+  .lnk:focus {
+    @apply outline-none;
+  }
+
+  .lnk-black {
+    @apply text-gray-800 text-base;
+  }
+  .lnk-black:visited {
+    @apply text-gray-600;
+  }
+}
 </style>
+
