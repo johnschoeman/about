@@ -1,7 +1,8 @@
 <script lang="ts">
-  import { Router, Link, Route } from "svelte-routing"
+  import { Router, Route } from "svelte-routing"
 
   import Home from "./Home.svelte"
+  import Header from "./Header.svelte"
   import About from "./About.svelte"
   import Doodles from "./Doodles.svelte"
   import Footer from "./Footer.svelte"
@@ -10,16 +11,10 @@
 </script>
 
 <main>
+<div class="max-w-full px-12 py-12 mx-auto bg-white">
+  <div class="max-w-lg mx-auto">
   <Router bind:url>
-    <nav>
-      <h1><a href="/">John Schoeman</a></h1>
-
-      <ul>
-        <Link to="/">Home</Link>
-        <Link to="/doodles">Doodles</Link>
-        <Link to="/about">About</Link>
-      </ul>
-    </nav>
+    <Header />
 
     <div>
       <Route path="/doodles"><Doodles /></Route>
@@ -29,6 +24,8 @@
   </Router>
 
   <Footer />
+  </div>
+</div>
 </main>
 
 <style global lang="postcss">
