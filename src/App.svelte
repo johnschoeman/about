@@ -11,21 +11,21 @@
 </script>
 
 <main>
-<div class="max-w-full px-12 py-12 mx-auto bg-white">
-  <div class="max-w-lg mx-auto">
-  <Router bind:url>
-    <Header />
+  <div class="max-w-full px-12 py-12 mx-auto bg-white">
+    <div class="max-w-lg mx-auto">
+      <Router bind:url>
+        <Header />
 
-    <div>
-      <Route path="/doodles"><Doodles /></Route>
-      <Route path="/about"><About /></Route>
-      <Route path="/"><Home /></Route>
+        <div>
+          <Route path="/doodles"><Doodles /></Route>
+          <Route path="/about"><About /></Route>
+          <Route path="/"><Home /></Route>
+        </div>
+      </Router>
+
+      <Footer />
     </div>
-  </Router>
-
-  <Footer />
   </div>
-</div>
 </main>
 
 <style global lang="postcss">
@@ -33,27 +33,25 @@
   @tailwind components;
   @tailwind utilities;
 
+  @layer components {
+    .lnk {
+      @apply inline-block text-blue-600 underline;
+    }
+    .lnk:visited {
+      @apply text-indigo-600;
+    }
+    .lnk:hover {
+      @apply text-blue-800;
+    }
+    .lnk:focus {
+      @apply outline-none;
+    }
 
-@layer components {
-  .lnk {
-    @apply inline-block text-blue-600 underline;
+    .lnk-black {
+      @apply text-gray-800 text-base;
+    }
+    .lnk-black:visited {
+      @apply text-gray-600;
+    }
   }
-  .lnk:visited {
-    @apply text-indigo-600;
-  }
-  .lnk:hover {
-    @apply text-blue-800;
-  }
-  .lnk:focus {
-    @apply outline-none;
-  }
-
-  .lnk-black {
-    @apply text-gray-800 text-base;
-  }
-  .lnk-black:visited {
-    @apply text-gray-600;
-  }
-}
 </style>
-

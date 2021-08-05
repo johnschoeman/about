@@ -11,4 +11,3 @@
     <Link to="/about">About</Link>
   </ul>
 </nav>
-
