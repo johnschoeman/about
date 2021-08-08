@@ -4,19 +4,6 @@
   <div class="mt-8">
     <h2 class="mb-2 h2">development work</h2>
 
-    <a class="mt-4 text-lg lnk" href="https://thoughtbot.com/case-studies/pathcheck">
-      PathCheck
-    </a>
-    <a class="mt-4 underline lnk" href="https://github.com/Path-Check/gaen-mobile">github</a>
-
-    <p class="mt-2 p">
-    I was a core contributor and technical project manager for
-    PathCheck's Covid-19 contact tracing consumer app project. Over a
-    few months, we designed, developed and shipped a the application to
-    7 states and countries, which had millions of downloads and helped
-    fight Covid-19.
-    </p>
-
     <a class="mt-4 text-lg lnk" href="https://apps.apple.com/us/app/building-habits/id1534446576">
       Each
     </a>
