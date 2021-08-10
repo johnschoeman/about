@@ -63,9 +63,9 @@
       <p>3 years, 6 months</p>
 
       <p class="mt-4">
-      <a class="lnk" href="https://thoughtbot.com/">thoughtbot</a> is a 100+
-      person digital product consultance. Focusing on commericial and non-profit
-      applications built with modern web developers.
+        <a class="lnk" href="https://thoughtbot.com/">thoughtbot</a>
+        is a 100+ person consultancy focusing on the design and development of digital
+        products.
       </p>
 
       <div class={someDetailJobContainerStyle}>
@@ -147,12 +147,12 @@
 
     <div class="mt-12">
       <h3>Lionakis</h3>
-      <p>9 months</p>
+      <p class="sub">9 months</p>
 
       <div class={someDetailJobContainerStyle}>
         <h4>Designer/Project Engineer</h4>
-        <p>Jan 2014 - Aug 2014</p>
-        <p>Sacramento, CA</p>
+        <p class="sub">Jan 2014 - Aug 2014</p>
+        <p class="sub">Sacramento, CA</p>
       </div>
     </div>
   </div>
