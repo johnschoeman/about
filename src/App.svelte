@@ -5,7 +5,7 @@
   import Header from "./Header.svelte"
   import About from "./About.svelte"
   import Doodles from "./Doodles.svelte"
-  import WorkHistory from "./WorkHistory.svx"
+  import WorkHistory from "./WorkHistory.svelte"
   import Footer from "./Footer.svelte"
 
   export let url = ""
@@ -80,7 +80,7 @@
     }
 
     .markdown > * + * {
-      @apply mt-0 mb-4;
+      @apply mt-0;
     }
 
     .markdown li + li {
