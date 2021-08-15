@@ -79,6 +79,10 @@
       @apply text-gray-900 leading-normal break-words;
     }
 
+    .markdown p {
+      @apply mt-2;
+    }
+
     .markdown > * + * {
       @apply mt-0;
     }
@@ -88,7 +92,7 @@
     }
 
     .markdown li > p + p {
-      @apply mt-6;
+      @apply mt-8;
     }
 
     .markdown strong {
