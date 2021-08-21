@@ -10,6 +10,7 @@
   const links = [
     { path: "/", label: "home" },
     { path: "/about", label: "about" },
+    { path: "/doodles", label: "doodles" },
     { path: "/work_history", label: "work history" },
   ]
 </script>
