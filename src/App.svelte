@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Router, Route } from "svelte-routing"
 
-  import Home from "./Home.svelte"
+  import Home from "./Home/Main.svelte"
   import Header from "./Header.svelte"
   import About from "./About.svelte"
   import Doodles from "./Doodles.svelte"
