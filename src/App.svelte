@@ -11,11 +11,11 @@
   export let url = ""
 </script>
 
-<main class="flex flex-col justify-between h-screen">
+<main class="flex flex-col justify-between h-screen overflow-y-scroll">
   <Router bind:url>
     <Header />
 
-    <div class="max-w-4xl px-8 pb-24 mx-auto mb-auto">
+    <div class="w-full max-w-4xl px-8 pb-24 mx-auto mb-auto">
       <Route path="/doodles"><Doodles /></Route>
       <Route path="/about"><About /></Route>
       <Route path="/work_history"><WorkHistory /></Route>
@@ -33,7 +33,7 @@
 
   @layer components {
     .lnk {
-      @apply inline-block text-blue-600 underline;
+      @apply text-blue-600 underline;
     }
     .lnk:visited {
       @apply text-indigo-600;
