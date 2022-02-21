@@ -34,8 +34,8 @@
         </p>
 
         <p>
-          While primarily working as an individual technical contributor, I also
-          contribute as project manager, ux designer, and people manager.
+          While primarily working as an individual technical contributor, I have
+          also contributed as project manager, ux designer, and people manager.
         </p>
       </div>
     </div>
@@ -81,6 +81,78 @@
     <div>from apprentice to team lead</div>
 
     <div class="mt-12">
+      <h3>Evolv Technologies</h3>
+      <div>6 months</div>
+
+      <p>
+        <a class="lnk" href="https://www.evolvtechnology.com/">Evolv</a> is a
+        technology company in the safety and security space. We are developing
+        the next generation weapon detection systems which incorporate novel
+        sensor technologies, machine learning, and integrated analytics.
+      </p>
+
+      <div class={someDetailJobContainerStyle}>
+        <h4>Technical Team Lead</h4>
+        <RoleDetails
+          from={"Dec 2021"}
+          to={"Now"}
+          duration={"3 mos"}
+          location={"Boston, MA"}
+        />
+        <p>
+        Technical Team Lead for the UI/UX division, which focuses on Evolv's
+        digital product suite that allows users to interact with thier fleet of
+        scanners.
+        </p>
+        <ul class="mt-4">
+          <li>
+            Establish and implement Software Delivery process for web
+            applications at Evolv.
+          </li>
+          <li>
+            Design and develop new product features.
+          </li>
+          <li>
+            Work closely with the managing director to manage team and establish
+            hiring practices for front end developers.
+          </li>
+          <li>Established technical strategy for the team</li>
+          <li>
+            Managed other developers, including weekly 1-on-1s, reviewing for
+            promotions, and providing general support
+          </li>
+        </ul>
+      </div>
+
+      <div class={someDetailJobContainerStyle}>
+        <h4>Senior Frontend Developer</h4>
+        <RoleDetails
+          from={"Sept 2021"}
+          to={"Dec 2021"}
+          duration={"2 mos"}
+          location={"Boston, MA"}
+        />
+        <p>
+        Senior Frontend Developer in Evolv's UI/UX division, which focuses on Evolv's
+        digital product suite that allows users to interact with thier fleet of
+        scanners.
+        </p>
+        <ul class="mt-4">
+          <li>
+            Establish and implement Software Delivery process for web
+            applications at Evolv.
+          </li>
+          <li>
+            Design and develop new product features.
+          </li>
+          <li>
+            Helped transition legacy codebase to modern development standards.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12">
       <h3>thoughtbot</h3>
       <div>3 years, 6 months</div>
 
@@ -117,7 +189,7 @@
         <h4>Ignite Development Team Lead</h4>
         <RoleDetails
           from={"Jan 2021"}
-          to={"Now"}
+          to={"Sept 2021"}
           duration={"8 mos"}
           location={"Remote, (GMT-4)"}
         />
