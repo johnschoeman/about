@@ -84,6 +84,13 @@
       <h3>Evolv Technologies</h3>
       <div>6 months</div>
 
+      <p class="mt-8 p">
+        I work as a Technical Team Lead and product developer at <a class="lnk"
+          href="https://www.evolvtechnology.com/">Evolv</a> in the UI/UX division.
+        Professionally, I spend most of my time developing digital products and
+        helping teams develop better software practices.
+      </p>
+
       <p>
         <a class="lnk" href="https://www.evolvtechnology.com/">Evolv</a> is a
         technology company in the safety and security space. We are developing
