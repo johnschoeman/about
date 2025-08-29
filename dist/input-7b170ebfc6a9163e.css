@@ -219,6 +219,9 @@
   .fixed {
     position: fixed;
   }
+  .static {
+    position: static;
+  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
@@ -299,6 +302,9 @@
   }
   .h-24 {
     height: calc(var(--spacing) * 24);
+  }
+  .h-32 {
+    height: calc(var(--spacing) * 32);
   }
   .h-full {
     height: 100%;

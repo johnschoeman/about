@@ -1,16 +1,32 @@
 use leptos::prelude::*;
+use leptos_router::components::*;
+use leptos_router::path;
 
-use crate::app::header::Header;
 use crate::app::footer::Footer;
+use crate::app::header::Header;
+use crate::app::pages::about::About;
+use crate::app::pages::doodles::Doodles;
+use crate::app::pages::home::Home;
+use crate::app::pages::work_history::WorkHistory;
 
 #[component]
 pub fn App() -> impl IntoView {
     view! {
-        <main class="w-full max-w-4xl px-8 pb-24 mx-auto mb-auto">
-            <Header />
-            <p>Hello World</p>
-             <Footer />
-         </main>
+        <Router>
+            <main class="flex flex-col justify-between h-screen overflow-y-scroll">
+                <Header />
+
+                <div class="w-full max-w-4xl px-8 pb-24 mx-auto mb-auto">
+                    <Routes fallback=|| "Page not found.">
+                        <Route path=path!("/") view=Home/>
+                        <Route path=path!("/about") view=About/>
+                        <Route path=path!("/doodles") view=Doodles/>
+                        <Route path=path!("/work_history") view=WorkHistory/>
+                    </Routes>
+                </div>
+
+                <Footer />
+            </main>
+        </Router>
     }
 }
-
