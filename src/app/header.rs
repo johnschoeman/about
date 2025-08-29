@@ -1,5 +1,6 @@
 use leptos::prelude::*;
 use leptos_router::components::*;
+use leptos_router::hooks::use_location;
 
 #[derive(Clone)]
 struct NavItem {
@@ -99,21 +100,44 @@ pub fn Header() -> impl IntoView {
 
 #[component]
 fn NavLink(path: &'static str, label: &'static str) -> impl IntoView {
+    let location = use_location();
+
     let mobile_base_style = "items-center text-lg font-medium py-2 px-4 border-l-4 block";
     let desktop_base_style = "sm:inline-flex sm:border-b-4 sm:border-l-0 sm:px-2 sm:pt-2";
     let base_style = format!("{} {}", mobile_base_style, desktop_base_style);
-
-    let mobile_active_style = "text-indigo-700 border-indigo-500 bg-indigo-50";
-    let desktop_active_style = "sm:text-gray-900 sm:bg-white";
-    let active_style = format!("{} {}", mobile_active_style, desktop_active_style);
 
     let mobile_inactive_style = "text-gray-500 border-transparent hover:border-gray-300 hover:text-gray-700 hover:bg-gray-50";
     let desktop_inactive_style = "sm:hover:bg-white";
     let inactive_style = format!("{} {}", mobile_inactive_style, desktop_inactive_style);
 
+    let mobile_active_style = "text-indigo-700 border-indigo-500 bg-indigo-50";
+    let desktop_active_style = "sm:text-gray-900 sm:bg-white";
+    let active_style = format!("{} {}", mobile_active_style, desktop_active_style);
+
+    let is_active = move || {
+        let current_path = location.pathname.get();
+        if path == "/" {
+            current_path == "/"
+        } else {
+            current_path.starts_with(path)
+        }
+    };
+
+    let link_classes = move || {
+        if is_active() {
+            format!("{} {}", base_style, active_style)
+        } else {
+            format!("{} {}", base_style, inactive_style)
+        }
+    };
+
     view! {
-        <A href=path >
-            <p class=inactive_style>{label}</p>
+        <A
+            href=path
+            attr:class=link_classes
+            // exact=if path == "/" { true } else { false }
+        >
+            {label}
         </A>
     }
 }
