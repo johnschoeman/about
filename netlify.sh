@@ -1,7 +1,10 @@
-echo "Start netlify.sh"
+echo "---- Start netlify.sh"
 
-echo "Install trunk"
+echo "---- Install trunk"
 brew install trunk
 
-echo "Build app"
+echo "---- Install tailwindcss"
+brew install tailwindcss
+
+echo "---- Build app"
 trunk build --release
