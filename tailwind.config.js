@@ -14,9 +14,9 @@ module.exports = {
       brightness: ["hover", "focus"],
     },
   },
-  plugins: [require("@tailwindcss/aspect-ratio")],
+  plugins: [],
   purge: {
-    content: ["./src/**/*.svelte"],
+    content: ["./src/**/*.rs"],
     enabled: production, // disable purge in dev
   },
 }
