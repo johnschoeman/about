@@ -1,4 +1,5 @@
 use leptos::prelude::*;
+use crate::app::components::ortho_board_doodle::OrthoBoardDoodle;
 
 #[component]
 pub fn Home() -> impl IntoView {
@@ -13,13 +14,7 @@ pub fn Home() -> impl IntoView {
             </p>
 
             <div class="mt-64">
-                // OrthoBoardDoodle component would go here
-                // For now, placeholder content
-                <div class="w-full h-32 bg-gray-200 border border-gray-300 rounded">
-                    <div class="flex items-center justify-center h-full text-gray-500">
-                        "Interactive Doodle Placeholder"
-                    </div>
-                </div>
+                <OrthoBoardDoodle />
             </div>
         </div>
     }

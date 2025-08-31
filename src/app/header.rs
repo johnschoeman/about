@@ -135,7 +135,6 @@ fn NavLink(path: &'static str, label: &'static str) -> impl IntoView {
         <A
             href=path
             attr:class=link_classes
-            // exact=if path == "/" { true } else { false }
         >
             {label}
         </A>
