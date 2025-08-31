@@ -1,5 +1,5 @@
-use leptos::prelude::*;
 use crate::app::components::ortho_board_doodle::OrthoBoardDoodle;
+use leptos::prelude::*;
 
 #[component]
 pub fn Home() -> impl IntoView {

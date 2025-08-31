@@ -60,11 +60,11 @@ pub fn OrthoBoardDoodle() -> impl IntoView {
 }
 
 fn create_initial_grid() -> Vec<Vec<u32>> {
-    let mut rng = rand::thread_rng();
+    let mut rng = rand::rng();
     (0..ROW_COUNT)
         .map(|_| {
             (0..COLUMN_COUNT)
-                .map(|_| rng.gen_range(0..=100))
+                .map(|_| rng.random_range(0..=100))
                 .collect()
         })
         .collect()
