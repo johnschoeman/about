@@ -2,13 +2,3 @@
 stage = "pre_build"
 command = "echo"
 command_arguments = ["Hello", "Trunk!"]
-
-[[hooks]]
-stage = "pre_build"
-command = "tailwindcss"
-command_arguments = ["-i", "input.css", "-o", "app.css"]
-
-[[hooks]]
-stage = "post_build"
-command = "tail"
-command_arguments = ["dist/input-*.css"]
