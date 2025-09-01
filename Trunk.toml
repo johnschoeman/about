@@ -11,4 +11,4 @@ command_arguments = ["-i", "input.css", "-o", "app.css"]
 [[hooks]]
 stage = "post_build"
 command = "tail"
-command_arguments = ["app.css"]
+command_arguments = ["dist/input-*.css"]
