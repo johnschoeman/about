@@ -4,47 +4,42 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Architecture
 
-This is a personal about page that exists in a transition state between two frontend frameworks:
+This is a personal about page built with the Leptos web framework (Rust/WASM).
 
-- **Legacy Svelte App**: Located in `src_svelte/` with TypeScript and Rollup build system
-- **New Leptos App**: Located in `src/` using Rust/WASM with Trunk build tool
-
-The current active branch appears to be migrating from Svelte to Leptos (Rust web framework).
-
-### Svelte Application (Legacy)
-- Entry point: `src_svelte/main.ts` 
-- Main component: `src_svelte/App.svelte` with client-side routing
-- Components include Header, Footer, About, Doodles, WorkHistory pages
-- Uses Tailwind CSS for styling with PostCSS processing
-
-### Leptos Application (Current)
+### Application Structure
 - Entry point: `src/main.rs`
 - Main component: `src/app/app.rs` 
-- Modular structure with separate header/footer components
+- Modular component structure:
+  - Header: `src/app/header.rs`
+  - Footer: `src/app/footer.rs`
 - Uses Leptos framework for reactive web components in Rust
-- Compiles to WebAssembly
+- Compiles to WebAssembly for browser execution
 
 ## Development Commands
 
-### Leptos/Rust Development
 ```bash
 trunk serve          # Start development server with hot reload
 trunk build          # Build for production
 cargo check          # Type check Rust code
+cargo clippy         # Lint Rust code
+cargo fmt            # Format Rust code
 ```
 
-### Legacy Svelte Development  
-```bash
-yarn dev             # Start development server (Rollup with watch)
-yarn build           # Build for production
-yarn check           # Type check with svelte-check
-yarn format          # Format code with Prettier
-```
+## Build System
 
-## Build Systems
-
-- **Current (Leptos)**: Uses Trunk for WASM builds, configured via `index.html` with `data-trunk` attributes
-- **Legacy (Svelte)**: Uses Rollup with plugins for TypeScript, Svelte preprocessing, and Tailwind CSS
+Uses Trunk for WASM builds, configured via:
+- `Trunk.toml` for build configuration
+- `index.html` with `data-trunk` attributes for asset processing
+- `rust-toolchain.toml` for Rust version specification
 
 ## Styling
-Both applications use Tailwind CSS. The Leptos version references `input.css` while Svelte uses PostCSS processing in the build pipeline.
+
+Uses Tailwind CSS with:
+- Input file: `input.css` 
+- PostCSS configuration via `postcss.config.js`
+
+## Deployment
+
+Configured for Netlify deployment via:
+- `netlify.toml` configuration
+- `netlify.sh` build script

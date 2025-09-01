@@ -1,5 +1,6 @@
-use crate::app::components::ortho_board_doodle::OrthoBoardDoodle;
 use leptos::prelude::*;
+
+use super::ortho_board_doodle::OrthoBoardDoodle;
 
 #[component]
 pub fn Home() -> impl IntoView {
@@ -13,7 +14,7 @@ pub fn Home() -> impl IntoView {
                 "helping teams develop better software practices."
             </p>
 
-            <div class="mt-64">
+            <div class="mt-8">
                 <OrthoBoardDoodle />
             </div>
         </div>
