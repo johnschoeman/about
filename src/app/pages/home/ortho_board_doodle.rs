@@ -94,34 +94,27 @@ pub fn OrthoBoardDoodle() -> impl IntoView {
     };
 
     view! {
-        <div class="w-full h-64 sm:h-48 aspect-[4/16] sm:aspect-[16/4]">
-            <div class="h-full flex flex-row sm:flex-col">
-                {move || {
-                    grid.get()
-                        .into_rows()
-                        .into_iter()
-                        .enumerate()
-                        .map(|(row_idx, row)| {
-                            view! {
-                                <div class="h-full flex flex-col flex-1 sm:flex-row">
-                                    {row.into_iter()
-                                        .enumerate()
-                                        .map(|(col_idx, cell_value)| {
-                                            let color_class = determine_color(cell_value);
-                                            view! {
-                                                <div
-                                                    class=format!("cursor-pointer flex-1 {}", color_class)
-                                                    on:click=handle_cell_click(row_idx, col_idx)
-                                                />
-                                            }
-                                        })
-                                        .collect_view()}
-                                </div>
-                            }
-                        })
-                        .collect_view()
-                }}
-            </div>
+        <div class="w-full grid grid-cols-24 gap-0">
+            {move || {
+                grid.get()
+                    .into_rows()
+                    .into_iter()
+                    .enumerate()
+                    .flat_map(|(row_idx, row)| {
+                        row.into_iter()
+                            .enumerate()
+                            .map(move |(col_idx, cell_value)| {
+                                let color_class = determine_color(cell_value);
+                                view! {
+                                    <div
+                                        class=format!("cursor-pointer aspect-square {}", color_class)
+                                        on:click=handle_cell_click(row_idx, col_idx)
+                                    />
+                                }
+                            })
+                    })
+                    .collect_view()
+            }}
         </div>
     }
 }

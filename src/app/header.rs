@@ -37,7 +37,7 @@ pub fn Header() -> impl IntoView {
 
     view! {
         <nav class="mb-12 sm:mb-24">
-            <div class="max-w-4xl px-8 mx-auto">
+            <div class="max-w-4xl px-4 sm:px-8 mx-auto">
                 <div class="flex items-center justify-between h-24">
                     <h1 class="text-lg font-black">
                         <A href="/">"john schoeman"</A>

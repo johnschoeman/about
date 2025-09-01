@@ -4,7 +4,7 @@ use leptos::prelude::*;
 pub fn Footer() -> impl IntoView {
     view! {
         <footer class="border-t border-gray-300">
-            <div class="max-w-4xl px-8 py-8 mx-auto space-x-4">
+            <div class="max-w-4xl px-4 sm:px-8 py-8 mx-auto flex flex-wrap gap-4 sm:space-x-4 sm:gap-0">
                 <a class="text-blue-600 underline hover:text-blue-800 visited:text-indigo-600"
                    href="https://www.linkedin.com/in/john-schoeman-36894658/">
                     "linkedin"

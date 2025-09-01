@@ -12,17 +12,19 @@ This is a personal about page built with the Leptos web framework (Rust/WASM).
 - Modular component structure:
   - Header: `src/app/header.rs`
   - Footer: `src/app/footer.rs`
+  - Pages:  `src/app/pages/`
 - Uses Leptos framework for reactive web components in Rust
 - Compiles to WebAssembly for browser execution
 
 ## Development Commands
 
 ```bash
-trunk serve          # Start development server with hot reload
-trunk build          # Build for production
-cargo check          # Type check Rust code
-cargo clippy         # Lint Rust code
-cargo fmt            # Format Rust code
+trunk build           # Make development build
+trunk build --release # Make release build
+trunk serve           # Start development server with hot reload
+cargo check           # Type check Rust code
+cargo clippy          # Lint Rust code
+cargo fmt             # Format Rust code
 ```
 
 ## Build System
@@ -34,7 +36,7 @@ Uses Trunk for WASM builds, configured via:
 
 ## Styling
 
-Uses Tailwind CSS with:
+Uses Tailwind CSS v4 with:
 - Input file: `input.css` 
 - PostCSS configuration via `postcss.config.js`
 

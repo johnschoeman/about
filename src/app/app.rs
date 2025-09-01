@@ -13,10 +13,10 @@ use crate::app::pages::work_history::WorkHistory;
 pub fn App() -> impl IntoView {
     view! {
         <Router>
-            <main class="flex flex-col justify-between h-screen overflow-y-scroll">
+            <main class="flex flex-col justify-between h-screen overflow-y-scroll text-lg">
                 <Header />
 
-                <div class="w-full max-w-4xl px-8 pb-24 mx-auto mb-auto">
+                <div class="w-full max-w-3xl px-4 sm:px-8 pb-12 mx-auto mb-auto">
                     <Routes fallback=|| "Page not found.">
                         <Route path=path!("/") view=Home/>
                         <Route path=path!("/about") view=About/>
