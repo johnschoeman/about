@@ -6,16 +6,20 @@ use super::ortho_board_doodle::OrthoBoardDoodle;
 pub fn Home() -> impl IntoView {
     view! {
         <div>
-            <h1 class="text-4xl sm:text-6xl font-black text-gray-900">"hello,"</h1>
+            <h1 class="text-4xl sm:text-6xl font-black text-gray-900">"hello!"</h1>
 
             <p class="mt-4 sm:mt-8 text-gray-900">
-                "I'm John. I'm a software developer and this is my personal website."
+                "I'm a software developer with expertise in digital products and web development."
             </p>
 
             <p class="mt-6 text-gray-900">
-                "Professionally, I spend most of my time building digital products and helping teams develop better software practices. Currently exploring "
-                "the intersection of web development and systems programming, with a focus on Rust and Nix. "
-                "Taking a sabbatical to dive deeper into creative projects and emerging technologies."
+                "Professionally, I spend most of my time building digital products and helping teams develop better software practices. "
+                "I have also contributed as a designer, project manager, and people manager."
+            </p>
+
+            <p class="mt-6 text-gray-900">
+                "I'm currently taking a sabbatical to dive deeper into creative projects and emerging technologies, "
+                "particularly Rust, Nix, and higher-level mathematics."
             </p>
 
             <p class="mt-6 text-gray-900">
