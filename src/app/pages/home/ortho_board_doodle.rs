@@ -5,6 +5,9 @@ use std::time::Duration;
 const ROW_COUNT: usize = 5;
 const COLUMN_COUNT: usize = 13;
 
+const TICK_DURATION: u64 = 6;
+// const TICK_DURATION: u64 = 1;
+
 const ACTIVE_MODS: [u32; 2] = [2, 5];
 const GREEN_MODS: [u32; 1] = [37];
 const BLUE_MODS: [u32; 1] = [17];
@@ -109,6 +112,8 @@ impl Grid {
 
                     let should_increment = if is_cell_active {
                         active_neighbor_count == 2
+                            || inactive_neighbor_count == 4
+                            || inactive_neighbor_count == 2
                     } else {
                         inactive_neighbor_count == 2
                     };
@@ -144,7 +149,7 @@ pub fn OrthoBoardDoodle() -> impl IntoView {
                     current_grid.update_cellular_automaton();
                 });
             },
-            Duration::from_secs(6),
+            Duration::from_secs(TICK_DURATION),
         );
     });
 
@@ -185,10 +190,6 @@ pub fn OrthoBoardDoodle() -> impl IntoView {
             }}
         </div>
     }
-}
-
-fn is_even(value: u32) -> bool {
-    value % 2 == 0
 }
 
 fn is_active(value: u32) -> bool {
