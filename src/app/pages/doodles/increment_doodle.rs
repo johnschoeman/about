@@ -2,14 +2,14 @@ use leptos::prelude::*;
 use rand::Rng;
 use std::time::Duration;
 
-const ROW_COUNT: usize = 5;
-const COLUMN_COUNT: usize = 13;
+const ROW_COUNT: usize = 16;
+const COLUMN_COUNT: usize = 16;
 
-const TICK_DURATION: u64 = 6;
+const TICK_DURATION: u64 = 1;
 
-const ACTIVE_MODS: [u32; 2] = [2, 5];
+const ACTIVE_MODS: [u32; 2] = [2, 11];
 const GREEN_MODS: [u32; 1] = [37];
-const BLUE_MODS: [u32; 1] = [17];
+const BLUE_MODS: [u32; 1] = [73];
 const PURPLE_MODS: [u32; 1] = [49];
 
 #[derive(Clone)]
@@ -23,9 +23,11 @@ impl Grid {
     pub fn new(rows: usize, cols: usize) -> Self {
         let mut rng = rand::rng();
         let data = (0..rows)
+            // .map(|_| (0..cols).map(|_| 0).collect())
             .map(|_| (0..cols).map(|_| 1).collect())
             // .map(|_| (0..cols).map(|_| rng.random_range(0..=100)).collect())
             // .map(|_| (0..cols).map(|_| rng.random_range(0..=5)).collect())
+            // .map(|_| (0..cols).map(|_| rng.random_range(0..=1)).collect())
             .collect();
 
         Self { data, rows, cols }
@@ -77,7 +79,16 @@ impl Grid {
 
     pub fn get_neighbors(&self, row: usize, col: usize) -> Vec<u32> {
         let mut neighbors = Vec::new();
-        let directions = [(-1, 0), (0, -1), (0, 1), (1, 0)];
+        let directions = [
+            (-1, 0),
+            (0, -1),
+            (0, 1),
+            (1, 0),
+            (1, 1),
+            (1, -1),
+            (-1, 1),
+            (-1, -1),
+        ];
 
         for (dr, dc) in directions {
             let new_row = row as i32 + dr;
@@ -112,10 +123,17 @@ impl Grid {
 
                     let should_increment = if is_cell_active {
                         active_neighbor_count == 2
-                            || inactive_neighbor_count == 4
+                            || active_neighbor_count == 3
+                            || active_neighbor_count == 8
                             || inactive_neighbor_count == 2
+                            || inactive_neighbor_count == 4
+                            || inactive_neighbor_count == 7
+                            || inactive_neighbor_count == 8
                     } else {
-                        inactive_neighbor_count == 2
+                        inactive_neighbor_count == 1
+                            || inactive_neighbor_count == 2
+                            || inactive_neighbor_count == 3
+                            || inactive_neighbor_count == 8
                     };
 
                     if should_increment {
@@ -138,7 +156,7 @@ impl Grid {
 }
 
 #[component]
-pub fn OrthoBoardDoodle() -> impl IntoView {
+pub fn IncrementDoodle() -> impl IntoView {
     let initial_grid = Grid::new(ROW_COUNT, COLUMN_COUNT);
     let (grid, set_grid) = signal(initial_grid);
 
@@ -162,10 +180,10 @@ pub fn OrthoBoardDoodle() -> impl IntoView {
         }
     };
 
-    // let container_style = format!("w-full grid grid-cols-{} gap-0", COLUMN_COUNT);
-
     view! {
-        <div class="w-full grid grid-cols-13 gap-0">
+        <div
+            class=format!("w-full grid grid-cols-16 gap-0 {}", COLUMN_COUNT)
+            >
             {move || {
                 grid.get()
                     .into_rows()
@@ -179,10 +197,11 @@ pub fn OrthoBoardDoodle() -> impl IntoView {
                                 let text = format!("{}", cell_value);
                                 view! {
                                     <div
-                                        class=format!("cursor-pointer aspect-square {}", color_class)
+                                        class=format!("cursor-pointer aspect-square {} ", color_class)
                                         on:click=handle_cell_click(row_idx, col_idx)
-                                    // >{text}</div>
-                                    ></div>
+                                    >
+                                    // <p class="text-center text-xs">{text}</p>
+                                    </div>
                                 }
                             })
                     })

@@ -6,6 +6,7 @@ use crate::app::footer::Footer;
 use crate::app::header::Header;
 use crate::app::pages::about::About;
 use crate::app::pages::doodles::Doodles;
+use crate::app::pages::doodles::increment_doodle::IncrementDoodle;
 use crate::app::pages::home::home::Home;
 use crate::app::pages::work_history::WorkHistory;
 
@@ -21,6 +22,7 @@ pub fn App() -> impl IntoView {
                         <Route path=path!("/") view=Home/>
                         <Route path=path!("/about") view=About/>
                         <Route path=path!("/doodles") view=Doodles/>
+                        <Route path=path!("/doodles/increment") view=IncrementDoodle/>
                         <Route path=path!("/work_history") view=WorkHistory/>
                     </Routes>
                 </div>
