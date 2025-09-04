@@ -5,27 +5,82 @@ pub fn DetailedExperience() -> impl IntoView {
     view! {
         <div class="mt-24">
             <h2 class="text-4xl font-black text-gray-900">"in some detail"</h2>
-            <div>"from apprentice to team lead"</div>
+            <div>"from apprentice to principal engineer"</div>
 
             <div class="mt-12">
                 <h3 class="text-2xl font-semibold text-gray-900">"Evolv Technologies"</h3>
-                <div>"6 months"</div>
+                <div>"3 years, 10 months"</div>
 
                 <p class="mt-8 text-gray-900">
-                    "I work as a Technical Team Lead and product developer at "
+                    "I worked as a Principal Engineer and Technical Team Lead at "
                     <a class="text-blue-600 underline hover:text-blue-800 visited:text-indigo-600"
-                      href="https://www.evolvtechnology.com/">"Evolv"</a>
-                    " in the UI/UX division. "
-                    "Professionally, I spend most of my time developing digital products and "
-                    "helping teams develop better software practices."
+                      href="https://www.evolvtechnology.com/">"Evolv"</a>.
                 </p>
 
                 <p class="mt-2">
                     <a class="text-blue-600 underline hover:text-blue-800 visited:text-indigo-600" href="https://www.evolvtechnology.com/">"Evolv"</a>
-                    " is a technology company in the safety and security space. We are developing "
-                    "the next generation weapon detection systems which incorporate novel "
+                    " is a technology company in the safety and security space developing "
+                    "next generation weapon detection systems which incorporate novel "
                     "sensor technologies, machine learning, and integrated analytics."
                 </p>
+
+                <p class="mt-2">
+                    "I established continuous delivery culture, reducing deployment cycles from 6+ months to weekly production releases, "
+                    "while maintaining less than 1% change failure rate. Led complete UI rewrites for flagship products and managed "
+                    "a team of 5 engineers plus 2 contractors across frontend development initiatives."
+                </p>
+            </div>
+
+            <div class="mt-8 pl-4 border-gray-100 border-l-2 sm:pl-8">
+                <h4 class="leading-tight text-base font-semibold text-gray-900">"Principal Engineer, Team Lead"</h4>
+                <div class="text-sm text-gray-700">"Dec 2021 - June 2025 (3 yrs 7 mos) · Boston, MA"</div>
+                <p class="mt-2">
+                    "Principal Engineer and Technical Team Lead for frontend development, "
+                    "responsible for Evolv's digital product suite including flagship scanner "
+                    "interfaces and fleet management tools."
+                </p>
+                <ul class="mt-4 text-base pl-8 list-disc">
+                    <li>
+                        "Transformed deployment culture: reduced release cycles from 6+ months to weekly "
+                        "production deployments while achieving <1% change failure rate"
+                    </li>
+                    <li class="mt-1">
+                        "Led complete UI rewrite of flagship product and fleet management client application "
+                        "using TypeScript, React, Effect, React Native, and Electron"
+                    </li>
+                    <li class="mt-1">
+                        "Managed team of 5 engineers (mid to principal level) plus 2 contractors, "
+                        "conducting weekly 1-on-1s and promotion reviews"
+                    </li>
+                    <li class="mt-1">
+                        "Introduced functional programming concepts and modern development practices "
+                        "including continuous delivery and test-driven development"
+                    </li>
+                    <li class="mt-1">
+                        "Established technical strategy, hiring practices, and software delivery "
+                        "processes for frontend development organization"
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mt-8 pl-4 border-gray-100 border-l-2 sm:pl-8">
+                <h4 class="leading-tight text-base font-semibold text-gray-900">"Senior Frontend Developer"</h4>
+                <div class="text-sm text-gray-700">"Sept 2021 - Dec 2021 (4 mos) · Boston, MA"</div>
+                <p class="mt-2">
+                    "Senior Frontend Developer in Evolv's UI/UX division, focusing on digital "
+                    "products for scanner fleet interaction and management."
+                </p>
+                <ul class="mt-4 text-base pl-8 list-disc">
+                    <li>
+                        "Initiated software delivery process improvements for web applications"
+                    </li>
+                    <li class="mt-1">
+                        "Designed and developed new product features with focus on user experience"
+                    </li>
+                    <li class="mt-1">
+                        "Spearheaded transition from legacy codebase to modern development standards"
+                    </li>
+                </ul>
             </div>
 
             <div class="mt-12">
@@ -58,56 +113,6 @@ pub fn DetailedExperience() -> impl IntoView {
                     "primarily contributed to clients' business success by delivering quality "
                     "application code daily and by improving engineering team processes."
                 </p>
-
-                <div class="mt-8 pl-4 border-gray-100 border-l-2 sm:pl-8">
-                    <h4 class="leading-tight text-base font-semibold text-gray-900">"Technical Team Lead"</h4>
-                    <div class="text-sm text-gray-700">"Dec 2021 - Now (3 mos) · Boston, MA"</div>
-                    <p class="mt-2">
-                        "Technical Team Lead for the UI/UX division, which focuses on Evolv's "
-                        "digital product suite that allows users to interact with their fleet of "
-                        "scanners."
-                    </p>
-                    <ul class="mt-4 text-base pl-8 list-disc">
-                        <li>
-                            "Establish and implement Software Delivery process for web "
-                            "applications at Evolv."
-                        </li>
-                        <li class="mt-1">
-                            "Design and develop new product features."
-                        </li>
-                        <li class="mt-1">
-                            "Work closely with the managing director to manage team and establish "
-                            "hiring practices for front end developers."
-                        </li>
-                        <li class="mt-1">"Established technical strategy for the team"</li>
-                        <li class="mt-1">
-                            "Managed other developers, including weekly 1-on-1s, reviewing for "
-                            "promotions, and providing general support"
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="mt-8 pl-4 border-gray-100 border-l-2 sm:pl-8">
-                    <h4 class="leading-tight text-base font-semibold text-gray-900">"Senior Frontend Developer"</h4>
-                    <div class="text-sm text-gray-700">"Sept 2021 - Dec 2021 (2 mos) · Boston, MA"</div>
-                    <p class="mt-2">
-                        "Senior Frontend Developer in Evolv's UI/UX division, which focuses on Evolv's "
-                        "digital product suite that allows users to interact with their fleet of "
-                        "scanners."
-                    </p>
-                    <ul class="mt-4 text-base pl-8 list-disc">
-                        <li>
-                            "Establish and implement Software Delivery process for web "
-                            "applications at Evolv."
-                        </li>
-                        <li class="mt-1">
-                            "Design and develop new product features."
-                        </li>
-                        <li class="mt-1">
-                            "Helped transition legacy codebase to modern development standards."
-                        </li>
-                    </ul>
-                </div>
 
                 <div class="mt-8 pl-4 border-gray-100 border-l-2 sm:pl-8">
                     <h4 class="leading-tight text-base font-semibold text-gray-900">"Ignite Development Team Lead"</h4>

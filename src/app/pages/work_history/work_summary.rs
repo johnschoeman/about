@@ -10,20 +10,21 @@ pub fn WorkSummary() -> impl IntoView {
             <div class="flex mt-8 flex-col sm:flex-row">
                 <div class="flex border-gray-300 sm:w-44">
                     <div class="w-full text-sm text-gray-700 sm:text-right leading-10">
-                        "2017 - Now"
+                        "2017 - 2025"
                     </div>
                 </div>
                 <div class="sm:pl-8 w-full">
-                    <h3 class="text-2xl font-semibold text-gray-900">"Product Developer"</h3>
+                    <h3 class="text-2xl font-semibold text-gray-900">"Principal Engineer & Technical Leader"</h3>
                     <p class="mt-2">
-                        "I currently work as a full-stack developer and product consultant for "
-                        "digital products on web and mobile platforms. I mostly use "
-                        "technologies in the JavaScript ecosystem."
+                        "I work as a principal engineer and technical leader specializing in "
+                        "frontend architecture, team leadership, and engineering culture transformation. "
+                        "I focus on TypeScript, React, functional programming, and modern deployment practices."
                     </p>
 
                     <p class="mt-2">
-                        "While primarily working as an individual technical contributor, I have "
-                        "also contributed as project manager, ux designer, and people manager."
+                        "I've successfully scaled engineering teams, established continuous delivery practices, "
+                        "and led complete product rewrites while maintaining exceptional quality standards "
+                        "and mentoring engineers from mid to principal level."
                     </p>
                 </div>
             </div>
