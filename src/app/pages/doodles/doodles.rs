@@ -8,7 +8,7 @@ pub fn Doodles() -> impl IntoView {
         ("increment", "/doodles/increment"),
         (
             "triangle subdivision",
-            "https://www.doodles.kitchen/doodles/triangle_subdivision/",
+            "https://boring-hypatia-5625e0.netlify.app/doodles/triangle_subdivision/",
         ),
         (
             "modular",
@@ -34,35 +34,41 @@ pub fn Doodles() -> impl IntoView {
             "recaman",
             "https://clinquant-chebakia-3013c1.netlify.app/recaman/",
         ),
-        ("bpad", "https://www.doodles.kitchen/doodles/b_pad/"),
+        (
+            "bpad",
+            "https://boring-hypatia-5625e0.netlify.app/doodles/b_pad/",
+        ),
         (
             "tic tac toe",
-            "https://www.doodles.kitchen/doodles/tic_tac_toe/",
+            "https://boring-hypatia-5625e0.netlify.app/doodles/tic_tac_toe/",
         ),
         (
             "solar system 2",
-            "https://www.doodles.kitchen/doodles/solar_system_2/",
+            "https://boring-hypatia-5625e0.netlify.app/doodles/solar_system_2/",
         ),
         (
             "asteroids",
-            "https://www.doodles.kitchen/doodles/asteroids/",
+            "https://boring-hypatia-5625e0.netlify.app/doodles/asteroids/",
         ),
-        ("tree", "https://www.doodles.kitchen/doodles/tree/"),
+        (
+            "tree",
+            "https://boring-hypatia-5625e0.netlify.app/doodles/tree/",
+        ),
         (
             "solar system",
-            "https://www.doodles.kitchen/doodles/solar_system/",
+            "https://boring-hypatia-5625e0.netlify.app/doodles/solar_system/",
         ),
         (
             "mandlebrot",
-            "https://www.doodles.kitchen/doodles/mandlebrot/",
+            "https://boring-hypatia-5625e0.netlify.app/doodles/mandlebrot/",
         ),
         (
             "koch curve",
-            "https://www.doodles.kitchen/doodles/koch_curve/",
+            "https://boring-hypatia-5625e0.netlify.app/doodles/koch_curve/",
         ),
         (
             "mirror primes",
-            "https://www.doodles.kitchen/doodles/mirror_primes/",
+            "https://boring-hypatia-5625e0.netlify.app/doodles/mirror_primes/",
         ),
     ];
 
