@@ -7,7 +7,7 @@ const COLUMN_COUNT: usize = 16;
 
 const TICK_DURATION: u64 = 1;
 
-const ACTIVE_MODS: [u32; 2] = [2, 11];
+const ACTIVE_MODS: [u32; 3] = [3, 5, 11];
 const GREEN_MODS: [u32; 1] = [37];
 const BLUE_MODS: [u32; 1] = [73];
 const PURPLE_MODS: [u32; 1] = [49];
