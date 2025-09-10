@@ -23,8 +23,8 @@ impl Grid {
     pub fn new(rows: usize, cols: usize) -> Self {
         let mut rng = rand::rng();
         let data = (0..rows)
-            // .map(|_| (0..cols).map(|_| rng.random_range(0..=100)).collect())
-            .map(|_| (0..cols).map(|_| 0).collect())
+            .map(|_| (0..cols).map(|_| rng.random_range(0..=100)).collect())
+            // .map(|_| (0..cols).map(|_| 0).collect())
             .collect();
 
         Self { data, rows, cols }
