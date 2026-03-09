@@ -1,0 +1,56 @@
+# Project Specs
+#
+# Living acceptance criteria for the project. Each spec describes something
+# that should be true. Status is updated by the AI agent during sessions
+# when asked to verify, or at session start.
+#
+# Statuses: pass | fail | unknown
+# Areas: build, deploy, routing, feature
+
+[[spec]]
+id = "cargo-check"
+area = "build"
+description = "cargo check compiles for wasm32-unknown-unknown target"
+check = "cargo check --target wasm32-unknown-unknown"
+status = "pass"
+updated = "2026-03-09"
+
+[[spec]]
+id = "cargo-clippy"
+area = "build"
+description = "cargo clippy passes (warnings ok, no errors)"
+check = "cargo clippy --target wasm32-unknown-unknown"
+status = "pass"
+updated = "2026-03-09"
+
+[[spec]]
+id = "trunk-build"
+area = "build"
+description = "trunk build succeeds (Rust + Tailwind CSS processed)"
+check = "trunk build"
+status = "pass"
+updated = "2026-03-09"
+
+[[spec]]
+id = "trunk-build-release"
+area = "build"
+description = "trunk build --release produces production output"
+check = "trunk build --release"
+status = "unknown"
+updated = "2026-03-09"
+
+[[spec]]
+id = "devenv-shell"
+area = "build"
+description = "devenv shell provides all required tools (cargo, trunk, tailwindcss)"
+check = "devenv test"
+status = "pass"
+updated = "2026-03-09"
+
+[[spec]]
+id = "netlify-config"
+area = "deploy"
+description = "netlify.toml and netlify.sh are consistent and reference valid commands"
+check = "manual"
+status = "pass"
+updated = "2026-03-09"

@@ -92,6 +92,12 @@ This commit:
 
 **Never:** Run git commands that modify history.
 
+## Specs
+
+`.claude/specs.toml` tracks acceptance criteria with pass/fail status.
+When verifying, run checks inside `devenv shell` (prefix: `devenv shell --`).
+Update status and date after checking. Add new specs when adding features.
+
 ## Conventions
 
 - Rust nightly, edition 2024
