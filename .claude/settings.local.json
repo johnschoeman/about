@@ -15,7 +15,13 @@
       "Bash(LD=/nix/store/wb6rhpznjfczwlwx23zmdrrw74bayxw4-glibc-2.42-47/lib/ld-linux-x86-64.so.2:*)",
       "Bash($LD /home/john/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/cargo update)",
       "Bash(nix-shell:*)",
-      "Bash(trunk:*)"
+      "Bash(trunk:*)",
+      "WebFetch(domain:devenv.sh)",
+      "Bash(nix-env:*)",
+      "Bash(devenv version:*)",
+      "Bash(direnv version:*)",
+      "Bash(devenv:*)",
+      "Bash(direnv allow:*)"
     ]
   }
 }
