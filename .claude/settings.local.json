@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:crates.io)",
+      "WebSearch",
+      "WebFetch(domain:docs.rs)",
+      "WebFetch(domain:github.com)",
+      "Bash(ldd:*)",
+      "Bash(echo:*)",
+      "Bash(printenv:*)",
+      "Bash(PATH=\"/etc/profiles/per-user/john/bin:$PATH\" cargo update:*)",
+      "Bash(RUSTUP_HOME=/home/john/.rustup CARGO_HOME=/home/john/.cargo rustup run nightly cargo update:*)",
+      "Bash(export:*)",
+      "Bash(cargo update:*)",
+      "Bash(LD=/nix/store/wb6rhpznjfczwlwx23zmdrrw74bayxw4-glibc-2.42-47/lib/ld-linux-x86-64.so.2:*)",
+      "Bash($LD /home/john/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/cargo update)",
+      "Bash(nix-shell:*)",
+      "Bash(trunk:*)"
+    ]
+  }
+}

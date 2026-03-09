@@ -1,5 +1,5 @@
 use leptos::prelude::*;
-use rand::Rng;
+use rand::RngExt;
 use std::time::Duration;
 
 const ROW_COUNT: usize = 16;
