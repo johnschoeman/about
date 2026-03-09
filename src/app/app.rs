@@ -5,6 +5,7 @@ use leptos_router::path;
 use crate::app::footer::Footer;
 use crate::app::header::Header;
 use crate::app::pages::about::About;
+use crate::app::pages::blog::Blog;
 use crate::app::pages::doodles::Doodles;
 use crate::app::pages::doodles::increment_doodle::IncrementDoodle;
 use crate::app::pages::home::home::Home;
@@ -21,6 +22,7 @@ pub fn App() -> impl IntoView {
                     <Routes fallback=|| "Page not found.">
                         <Route path=path!("/") view=Home/>
                         <Route path=path!("/about") view=About/>
+                        <Route path=path!("/blog") view=Blog/>
                         <Route path=path!("/doodles") view=Doodles/>
                         <Route path=path!("/doodles/increment") view=IncrementDoodle/>
                         <Route path=path!("/work_history") view=WorkHistory/>
