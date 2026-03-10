@@ -21,7 +21,8 @@
       "Bash(devenv version:*)",
       "Bash(direnv version:*)",
       "Bash(devenv:*)",
-      "Bash(direnv allow:*)"
+      "Bash(direnv allow:*)",
+      "WebFetch(domain:trunkrs.dev)"
     ]
   }
 }

@@ -26,6 +26,10 @@ pub fn Header() -> impl IntoView {
             label: "about",
         },
         NavItem {
+            path: "/blog",
+            label: "blog",
+        },
+        NavItem {
             path: "/doodles",
             label: "doodles",
         },

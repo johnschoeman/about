@@ -9,3 +9,4 @@ leptos = { version = "0.8.17", features = ["csr"] }
 leptos_router = "0.8.12"
 rand = "0.10.0"
 getrandom = { version = "0.4.2", features = ["wasm_js"] }
+pulldown-cmark = { version = "0.13", default-features = false, features = ["html"] }
